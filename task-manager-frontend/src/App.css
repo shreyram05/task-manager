@@ -1,0 +1,137 @@
+.app {
+  background-color: #AFEEEE;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  text-align: center;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.task-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.task-form input,
+.task-form textarea,
+.task-form select,
+.task-form button {
+  width: 100%;
+  margin: 8px 0;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.task-form input,
+.task-form select {
+  background-color: #fafafa;
+}
+
+.task-form textarea {
+  resize: vertical;
+}
+
+.task-form button {
+  background-color: #007bff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+  background-color: #0056b3;
+}
+
+.task-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin: 10px 0;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.task-item:hover {
+  transform: translateY(-5px);
+}
+
+.task-item .task-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+
+.task-item .task-description {
+  font-size: 14px;
+  color: #555;
+  margin: 10px 0;
+}
+
+.task-item .task-due-date {
+  font-size: 12px;
+  color: #888;
+}
+
+.task-item .task-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.task-item .task-actions button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.task-item .task-actions button:hover {
+  background-color: #218838;
+}
+
+.task-item.completed {
+  background-color: #d4edda;
+  border-color: #28a745;
+}
+
+.task-item.completed .task-title {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+@media (max-width: 600px) {
+  .task-form {
+    padding: 15px;
+  }
+
+  .task-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .task-item .task-actions {
+    margin-top: 10px;
+  }
+}
